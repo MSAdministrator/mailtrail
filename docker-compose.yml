@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  mailtrail-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - "7001:7001"
+    volumes: 
+      - ./data:/mailtrail/data
+    environment: 
+      - QUERY=${QUERY}
+      - CHECK_INTERVAL=${CHECK_INTERVAL}
+      - USERNAME=${USERNAME}
+      - PASSOWRD=${PASSWORD}

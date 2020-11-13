@@ -1,0 +1,8 @@
+requests
+oauthlib
+pendulum
+requests_oauthlib
+fire
+graphish
+py-ews
+schedule
